@@ -1,0 +1,28 @@
+{
+  "doc": "Schema for stocks.",
+  "fields": [
+    {
+      "name": "total_revenues",
+      "type": "double"
+    },
+    {
+      "name": "operating_expenses",
+      "type": "double"
+    },
+    {
+      "name": "net_income",
+      "type": "double"
+    },
+    {
+      "name": "total_assets",
+      "type": "double"
+    },
+    {
+      "name": "total_equity",
+      "type": "double"
+    }
+  ],
+  "name": "Stock",
+  "namespace": "com.barstad.stocks",
+  "type": "record"
+}
