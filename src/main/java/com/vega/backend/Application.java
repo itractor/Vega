@@ -36,4 +36,9 @@ public class Application {
         return new ModelMapper();
     }
 
+    @Bean
+    public IStockInformationService stockInformationService() {
+        return new StockInformationService();
+    }
+
 }

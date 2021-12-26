@@ -1,5 +1,4 @@
 {
-  "doc": "Schema for stocks.",
   "fields": [
     {
       "name": "total_revenues",
