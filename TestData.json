@@ -3,26 +3,25 @@
   "fields": [
     {
       "name": "total_revenues",
-      "type": "double"
+      "value": 100.000
     },
     {
       "name": "operating_expenses",
-      "type": "double"
+      "type": 50.000
     },
     {
       "name": "net_income",
-      "type": "double"
+      "type": 60.000
     },
     {
       "name": "total_assets",
-      "type": "double"
+      "type": 500.000
     },
     {
       "name": "total_equity",
-      "type": "double"
+      "type": 100.000
     }
   ],
   "name": "Stock",
-  "namespace": "com.barstad.stocks",
   "type": "record"
 }
