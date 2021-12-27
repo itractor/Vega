@@ -1,26 +1,8 @@
 {
-  "fields": [
-    {
-      "name": "total_revenues",
-      "value": 100.000
-    },
-    {
-      "name": "operating_expenses",
-      "type": 50.000
-    },
-    {
-      "name": "net_income",
-      "type": 60.000
-    },
-    {
-      "name": "total_assets",
-      "type": 500.000
-    },
-    {
-      "name": "total_equity",
-      "type": 100.000
-    }
-  ],
-  "name": "Stock",
-  "type": "record"
+  "totalRevenue": 100.000,
+  "operatingExpenses": 100.000,
+  "netIncome": 100.000,
+  "totalAssets": 100.000,
+  "totalEquity": 100.000,
+  "stockTicker": "MOWI"
 }
