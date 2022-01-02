@@ -15,6 +15,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.nio.file.Paths;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 public class StockInformationControllerTest {
@@ -23,9 +25,18 @@ public class StockInformationControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void getHello() throws Exception {
+    public void getStockJsonData() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/stock/MOWI").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+                .andExpect(content().string(equalTo("{\"totalRevenue\":100.0,\"operatingExpenses\":100.0,\"netIncome\":100.0,\"totalAssets\":100.0,\"stockTicker\":\"MOWI\"}")));
+    //TODO make dynamic
+    }
+
+    @Test
+    public void getTopStocksJsondata() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/topStocks").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("{\"topStocks\":[\"MOWI\",\"EQNR\",\"FJKR\",\"DBRT\",\"TSLA\",\"QQQQ\",\"DOOB\"]}")));
+        //TODO make dynamic
     }
 }
