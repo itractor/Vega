@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @CrossOrigin
 @RestController
@@ -21,7 +22,7 @@ public class StockInformationController {
     public StockDto getStock(@PathVariable("ticker") String ticker) {
         StockDto stockDto = null;
         try {
-            stockDto = convertToDto(stockInformationService.getStockInformation(ticker));
+            stockDto = modelMapper.map(stockInformationService.getStockInformation(ticker), StockDto.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,8 +30,15 @@ public class StockInformationController {
         return stockDto;
     }
 
-    private StockDto convertToDto(Stock stock) {
-        StockDto stockDto = modelMapper.map(stock, StockDto.class);
+    @GetMapping(value = "topStocks")
+    @ResponseBody
+    public TopStocksDto getStock() {
+        TopStocksDto stockDto = null;
+        try {
+            stockDto = modelMapper.map(stockInformationService.getTopStocks(), TopStocksDto.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return stockDto;
     }
 

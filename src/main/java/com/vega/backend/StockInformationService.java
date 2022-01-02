@@ -13,7 +13,15 @@ public class StockInformationService implements IStockInformationService{
     //TODO get data from kafka and not locally (Maybe use AVRO?)
     public Stock getStockInformation(String stockTicker) throws IOException {
         Stock stock =
-                objectMapper.readValue(Paths.get("TestData.json").toFile(), Stock.class);
+                objectMapper.readValue(Paths.get("TestDataStock.json").toFile(), Stock.class);
+
+        return stock;
+    }
+
+    @Override
+    public TopStocks getTopStocks() throws IOException {
+        TopStocks stock =
+                objectMapper.readValue(Paths.get("TestDataTopStocks.json").toFile(), TopStocks.class);
 
         return stock;
     }
