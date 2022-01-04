@@ -1,9 +1,10 @@
-package com.vega.backend;
+package com.vega.backend.services;
 
+import com.vega.backend.entities.Stock;
+import com.vega.backend.entities.TopStocks;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 @RestController
 public interface IStockInformationService {

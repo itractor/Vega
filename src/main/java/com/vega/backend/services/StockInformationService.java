@@ -1,9 +1,10 @@
-package com.vega.backend;
+package com.vega.backend.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vega.backend.entities.Stock;
+import com.vega.backend.entities.TopStocks;
 
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Paths;
 
 public class StockInformationService implements IStockInformationService{

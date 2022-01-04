@@ -1,4 +1,4 @@
-package com.vega.backend;
+package com.vega.backend.entities;
 
 import lombok.Data;
 

@@ -1,11 +1,13 @@
-package com.vega.backend;
+package com.vega.backend.controllers;
 
+import com.vega.backend.dtos.StockDto;
+import com.vega.backend.dtos.TopStocksDto;
+import com.vega.backend.services.IStockInformationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 @CrossOrigin
 @RestController

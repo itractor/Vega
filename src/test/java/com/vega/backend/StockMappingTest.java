@@ -1,5 +1,7 @@
 package com.vega.backend;
 
+import com.vega.backend.dtos.StockDto;
+import com.vega.backend.entities.Stock;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
 

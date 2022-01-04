@@ -2,6 +2,8 @@ package com.vega.backend;
 
 import java.util.Arrays;
 
+import com.vega.backend.services.IStockInformationService;
+import com.vega.backend.services.StockInformationService;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -1,8 +1,8 @@
-package com.vega.backend;
+package com.vega.backend.dtos;
 
 import lombok.Data;
 
-public @Data class Stock {
+public @Data class StockDto {
 
     private double totalRevenue;
 
@@ -11,8 +11,6 @@ public @Data class Stock {
     private double netIncome;
 
     private double totalAssets;
-
-    private double totalEquity;
 
     private String stockTicker;
 }
