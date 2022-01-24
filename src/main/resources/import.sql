@@ -1,3 +1,1 @@
-insert into stock values(22222);
-insert into stock values(333333);
-insert into stock values(11111);
+INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (1, 'value2', 'value3', 'fuixck', 2000, 20000000);

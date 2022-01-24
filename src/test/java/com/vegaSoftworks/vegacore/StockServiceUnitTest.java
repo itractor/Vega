@@ -22,6 +22,10 @@ public class StockServiceUnitTest {
     public void whenApplicationStarts_thenHibernateCreatesInitialRecords() {
         List<Stock> stocks = stockService.list();
 
+        for (Stock stock : stocks) {
+            System.out.println(stock.getId());
+        }
+
         Assert.assertEquals(stocks.size(), 3);
     }
 }

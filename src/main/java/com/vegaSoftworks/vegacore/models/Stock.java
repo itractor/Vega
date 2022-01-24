@@ -14,9 +14,9 @@ public class Stock {
     private String name;
     private String currency;
     private String ticker;
-    private int year;
+    private int reportyear;
     private BigInteger revenue;
-    private BigInteger operatingIncome;
+    /*private BigInteger operatingIncome;
     private BigInteger netIncome;
     private BigInteger ebitda;
     private BigInteger totalAssets;
@@ -27,7 +27,7 @@ public class Stock {
     private BigInteger workingCapital;
 
     private double earningsPerShare;
-
+*/
     public Long getId() {
         return id;
     }
