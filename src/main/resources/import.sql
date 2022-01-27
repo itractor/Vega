@@ -1,4 +1,4 @@
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (1, 'value2', 'value2', 'fuixck', 2000, 20000000);
+INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (1, 'value2', 'value2', 'MOWI', 2000, 20000000);
 INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (2, 'value3', 'value3', 'fuixck', 300, 333333333);
 INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (3, 'value4', 'value4', 'fuixck', 20, 333333333);
 INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (4, 'value4', 'value4', 'fuixck', 20, 333333333);

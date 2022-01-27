@@ -2,12 +2,17 @@ package com.vegaSoftworks.vegacore.controllers;
 
 import com.vegaSoftworks.vegacore.models.Stock;
 import com.vegaSoftworks.vegacore.repositories.StockRepository;
+import com.vegaSoftworks.vegacore.services.StockService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") //TODO create proxy and remove
 @RestController
 public class StockController {
+    @Autowired
+    StockService stockService;
 
     private final StockRepository repository;
 
@@ -15,10 +20,14 @@ public class StockController {
         this.repository = repository;
     }
 
-    @CrossOrigin(origins = "*") //TODO create proxy and remove
     @GetMapping("/topStocks")
     List<Stock> getTopStocks() {
-        return repository.findAll(); //TODO ACTUALLY return the top stocks
+        return stockService.list(); //TODO ACTUALLY return the top stocks
+    }
+
+    @GetMapping("/stock/{stock}")
+    Stock getRequestedStock(@PathVariable String stock) {
+        return stockService.getStockDetails(stock);
     }
 /*
     @PostMapping("/addStockData")
