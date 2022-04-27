@@ -20,6 +20,8 @@ public class Stock {
     private String ticker;
     private int reportyear;
     private BigInteger revenue;
+    private BigInteger expenditures;
+
     /*private BigInteger operatingIncome;
     private BigInteger netIncome;
     private BigInteger ebitda;
