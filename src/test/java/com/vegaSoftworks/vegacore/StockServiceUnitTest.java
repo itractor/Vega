@@ -26,6 +26,6 @@ public class StockServiceUnitTest {
             System.out.println(stock.getId());
         }
 
-        Assert.assertEquals(stocks.size(), 3);
+        Assert.assertEquals(14, stocks.size());
     }
 }

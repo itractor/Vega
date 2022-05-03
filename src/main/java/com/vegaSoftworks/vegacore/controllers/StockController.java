@@ -26,7 +26,7 @@ public class StockController {
     }
 
     @GetMapping("/stock/{stock}")
-    Stock getRequestedStock(@PathVariable String stock) {
+    List<Stock> getRequestedStock(@PathVariable String stock) {
         return stockService.getStockDetails(stock);
     }
 /*

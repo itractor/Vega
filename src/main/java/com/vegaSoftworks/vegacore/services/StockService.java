@@ -17,8 +17,8 @@ public class StockService {
         return stockRepository.findAll();
     }
 
-    public Stock getStockDetails(String ticker) {
-        Stock stock = stockRepository.findByTicker(ticker);
+    public List<Stock> getStockDetails(String ticker) {
+        List<Stock> stock = stockRepository.findByTicker(ticker);
         System.out.println(stock);
         return stockRepository.findByTicker(ticker);
     }
