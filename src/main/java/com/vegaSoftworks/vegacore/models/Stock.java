@@ -3,24 +3,26 @@ package com.vegaSoftworks.vegacore.models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import java.math.BigInteger;
+import java.util.List;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@Table(name = "Stock")
 public class Stock {
 
     @Id
-    @GeneratedValue
+    @Column(name="STOCK_ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    private String currency;
+
+    @Column(name="TICKER", nullable=false, unique=true)
     private String ticker;
-    private int reportyear;
-    private BigInteger revenue;
-    private BigInteger expenditures;
+
+    @OneToMany(mappedBy = "stock")
+    private List<AnnualStats> annualStats;
 
     /*private BigInteger operatingIncome;
     private BigInteger netIncome;

@@ -1,14 +1,7 @@
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (1, 'value2', 'value2', 'MOWI', 2000, 20000000);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (2, 'value3', 'value3', 'fuixck', 300, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (3, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (4, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (5, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (6, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (7, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (8, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (9, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (10, 'value4', 'value4', 'fuixck', 20, 333333333);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (11, 'value2', 'value2', 'MOWI', 2001, 20000000);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (12, 'value2', 'value2', 'MOWI', 2002, 20000000);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (13, 'value2', 'value2', 'MOWI', 2003, 20000000);
-INSERT INTO stock (id, name, currency, ticker, reportyear, revenue) VALUES (14, 'value2', 'value2', 'MOWI', 2004, 20000000);
+INSERT INTO stock (STOCK_ID, ticker) VALUES (1,'MOWI');
+INSERT INTO stock (STOCK_ID, ticker) VALUES (2,'NEXT');
+INSERT INTO stock (STOCK_ID, ticker) VALUES (3,'WEXT');
+
+INSERT INTO annual_stats (id, STOCK_ID, revenue, report_year, expenditures) VALUES (98, 1, 400, 2000, 20);
+INSERT INTO annual_stats (id, STOCK_ID, revenue, report_year, expenditures) VALUES (99, 1, 500, 2001, 30);
+INSERT INTO annual_stats (id, STOCK_ID, revenue, report_year, expenditures) VALUES (100, 1, 600, 2002, 10);
