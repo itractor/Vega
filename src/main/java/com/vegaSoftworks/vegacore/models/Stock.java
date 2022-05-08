@@ -1,5 +1,6 @@
 package com.vegaSoftworks.vegacore.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,7 +22,8 @@ public class Stock {
     @Column(name="TICKER", nullable=false, unique=true)
     private String ticker;
 
-    @OneToMany(mappedBy = "stock")
+    @OneToMany(mappedBy = "stock", fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<AnnualStats> annualStats;
 
     /*private BigInteger operatingIncome;
