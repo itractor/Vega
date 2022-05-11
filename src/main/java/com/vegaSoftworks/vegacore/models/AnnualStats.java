@@ -29,4 +29,15 @@ public class AnnualStats {
     private BigInteger expenditures;
     @Column(name="report_year", nullable = false)
     private int year;
+
+    private BigInteger operatingIncome;
+    private BigInteger netIncome;
+    private BigInteger ebitda;
+    private BigInteger totalAssets;
+    private BigInteger totalLiabilities;
+    private BigInteger totalDebt;
+    private BigInteger totalEquity;
+    private BigInteger cashAndEquivalents;
+    private BigInteger workingCapital;
+    private double earningsPerShare;
 }
